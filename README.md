@@ -19,7 +19,7 @@ The GPU algorithm shows a very noticeable speedup on mobile devices too.
 
 In order to render the graph layout computed by the GPU algorithm, nodes positions should be extracted from the
 output frame buffer so that rendering commands can by issued by the CPU. Unfortunately, exchanging data between the GPU
-and the GPU (uing [glReadPixels](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels)) can
+and the GPU (using [glReadPixels](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels)) can
 be slow, especially for large graphs.
 
 To circumvent this issue, a custom WebGL renderer was developed. This renderer reads the algorithm output directly from the
